@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package kuis2oop;
+package quizoop2;
 
 /**
  *
@@ -18,6 +18,7 @@ import java.sql.SQLDataException;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import Connection.koneksi;
 
 
 
@@ -26,7 +27,7 @@ public class tambahFilm extends javax.swing.JFrame {
     /**
      * Creates new form tambahFilm
      */
-    private static Connection koneksi;
+    private static Connection koneksi = new koneksi().with();
     private DefaultTableModel model;
     
     public tambahFilm() {
@@ -40,25 +41,10 @@ public class tambahFilm extends javax.swing.JFrame {
         ambil_data_tabel();
     }
     
-    private static void buka_koneksi(){
-        if(koneksi == null){
-            try{
-                String url = "jdbc:mysql://localhost:3306/bioskop";
-                String user = "root";
-                String password = "";
-                DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-                koneksi = DriverManager.getConnection(url, user, password);
-            } catch (SQLException t) {
-                System.out.println("Error membuat koneksi");
-            }
-        }
-    }
-    
     private void ambil_data_tabel() {
         model.getDataVector().removeAllElements();
         model.fireTableDataChanged();
         try {
-            buka_koneksi();
             Statement s = koneksi.createStatement();
             String sql = "Select * from film";
             ResultSet r = s.executeQuery(sql);
@@ -335,7 +321,6 @@ public class tambahFilm extends javax.swing.JFrame {
 
     private void buttonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddActionPerformed
         // TODO add your handling code here:
-        buka_koneksi();
             String sqlkode="Insert into film (id_film, judul_film, durasi, harga) "
             + "values ('"+this.id.getText()+"',"
             + "'"+this.judul.getText()+"',"
@@ -367,7 +352,6 @@ public class tambahFilm extends javax.swing.JFrame {
 
     private void buttonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDeleteActionPerformed
         // TODO add your handling code here:
-        buka_koneksi();
         String sqlkode = "Delete from FILM WHERE id_film='" +tableMovie.getValueAt(tableMovie.getSelectedRow(), 0) +"'";
 
         try {
@@ -383,7 +367,6 @@ public class tambahFilm extends javax.swing.JFrame {
 
     private void buttonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEditActionPerformed
         // TODO add your handling code here:
-        buka_koneksi();
         String sqlkode = "Update film set "
         + "id_film  = '" +id.getText() +"',"
         + "judul_film = '" +judul.getText() +"',"       

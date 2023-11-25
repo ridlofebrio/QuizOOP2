@@ -9,13 +9,14 @@ import javax.swing.JOptionPane;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JFrame;
+import Connection.koneksi;
 /**
  *
  * @author Febrio
  */
 public class DetailTransaksi extends javax.swing.JPanel {
     String info;
-    private static Connection koneksi;
+    private static Connection koneksi = new koneksi().with();
     private DefaultTableModel model;
     /**
      * Creates new form DetailTransaksi
@@ -34,25 +35,10 @@ public class DetailTransaksi extends javax.swing.JPanel {
        
     }
     
-    
-    private static void buka_koneksi(){
-        if(koneksi == null){
-            try {
-                String url = "jdbc:mysql://localhost:3306/bioskop";
-                String user = "root";
-                String password = "";
-               DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-               koneksi = (Connection) DriverManager.getConnection(url,user,password);
-            } catch (SQLException e) {
-                System.out.println("Erro Membuat Koneksi");
-            }
-        }
-    }
     private void ambil_data_tabel() {
             model.getDataVector().removeAllElements();
             model.fireTableDataChanged();
             try {
-            buka_koneksi();
             Statement s = koneksi.createStatement();
             String sql = "Select * from detail_transaksi";
             ResultSet r = s.executeQuery(sql);
@@ -204,7 +190,6 @@ public class DetailTransaksi extends javax.swing.JPanel {
         String query = "SELECT id_transaksi, tgl_transaksi, f.judul_film, s.nama_studio, nama_pelanggan, k.nama_kursi, kode_jam FROM detail_transaksi d INNER JOIN film f on f.id_film = d.id_film INNER JOIN studio s on s.id_studio = d.id_studio INNER JOIN kursi k on k.id_kursi = d.id_kursi WHERE id_transaksi = '" + id_transaksi + "'";
         
         try {
-            buka_koneksi();
             Statement s = koneksi.createStatement();
             ResultSet r = s.executeQuery(query);
 

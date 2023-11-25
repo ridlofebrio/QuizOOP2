@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package oop_kuis2;
+package quizoop2;
 
 /**
  *
@@ -14,31 +14,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import Connection.koneksi;
 
 public class pesan_tiket extends javax.swing.JFrame {
-private static Connection koneksi;
+private static Connection koneksi = new koneksi().with();
 
 
     public pesan_tiket() {
         initComponents();
-        buka_koneksi();
         fillNoTransComboBox();
-       
-        
-    }
-    
-    private static void buka_koneksi(){
-        if(koneksi == null){
-            try{
-                String url = "jdbc:mysql://localhost:3306/kuis2oop";
-                String user = "root";
-                String password = "";
-                DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-                koneksi = DriverManager.getConnection(url, user, password);
-            }catch(SQLException t){
-                System.out.println("Error membuat koneksi");
-            }
-        }
+               
     }
     
     private void fillNoTransComboBox() {
@@ -357,7 +342,6 @@ private static Connection koneksi;
 
     private void jButtonPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesanActionPerformed
         // TODO add your handling code here:
-     buka_koneksi();
     String nama = jTextFieldNama.getText();
  
    
