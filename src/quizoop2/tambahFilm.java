@@ -22,7 +22,7 @@ import Connection.koneksi;
 
 
 
-public class tambahFilm extends javax.swing.JFrame {
+public class TambahFilm extends javax.swing.JFrame {
 
     /**
      * Creates new form tambahFilm
@@ -30,7 +30,7 @@ public class tambahFilm extends javax.swing.JFrame {
     private static Connection koneksi = new koneksi().with();
     private DefaultTableModel model;
     
-    public tambahFilm() {
+    public TambahFilm() {
         initComponents();
         model = new DefaultTableModel();
         this.tableMovie.setModel(model);
@@ -107,8 +107,6 @@ public class tambahFilm extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         kotakBawah.setBackground(new java.awt.Color(249, 253, 255));
         kotakBawah.setPreferredSize(new java.awt.Dimension(806, 420));
 
@@ -181,6 +179,11 @@ public class tambahFilm extends javax.swing.JFrame {
         });
 
         buttonBack.setText("BACK TO MENU");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBackActionPerformed(evt);
+            }
+        });
 
         kotakAtas.setBackground(new java.awt.Color(39, 40, 41));
         kotakAtas.setPreferredSize(new java.awt.Dimension(806, 50));
@@ -384,6 +387,11 @@ public class tambahFilm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonEditActionPerformed
 
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonBackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -401,20 +409,21 @@ public class tambahFilm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TambahFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tambahFilm().setVisible(true);
+                new TambahFilm().setVisible(true);
             }
         });
     }
