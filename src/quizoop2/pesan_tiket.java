@@ -577,12 +577,7 @@ public class pesan_tiket extends javax.swing.JFrame {
 
     private void jButtonSeat12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat12ActionPerformed
         // TODO add your handling code here:
-        int count = 0;
-        count++;
-        boolean is12Selected = false;
-        if (is12Selected == false) {
-            jButtonSeat12.setBackground(Color.yellow);
-        }
+        
     }//GEN-LAST:event_jButtonSeat12ActionPerformed
 
     private void jButtonSeat11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat11ActionPerformed
