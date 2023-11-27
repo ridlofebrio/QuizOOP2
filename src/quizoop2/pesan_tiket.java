@@ -81,7 +81,7 @@ public class pesan_tiket extends javax.swing.JFrame {
         jButtonPesan = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
         jLabelNo = new javax.swing.JLabel();
-        jComboBoxNoTrans = new javax.swing.JComboBox<>();
+        jComboBoxNoTrans = new javax.swing.JComboBox<String>();
         jLabel3 = new javax.swing.JLabel();
         jPanelSeating = new javax.swing.JPanel();
         jLabelSeating = new javax.swing.JLabel();
@@ -179,7 +179,7 @@ public class pesan_tiket extends javax.swing.JFrame {
         jLabelNo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelNo.setText("No Transaksi:");
 
-        jComboBoxNoTrans.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxNoTrans.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBoxNoTrans.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxNoTransActionPerformed(evt);
