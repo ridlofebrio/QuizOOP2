@@ -46,6 +46,9 @@ private static Connection koneksi;
         jPanelTambahFilm = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jPanelTayang = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jPanelLogout = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -128,6 +131,43 @@ private static Connection koneksi;
                 .addGap(16, 16, 16))
         );
 
+        jPanelTayang.setBackground(new java.awt.Color(239, 239, 239));
+        jPanelTayang.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelTayang.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTayangMouseClicked(evt);
+            }
+        });
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cinema-screen.png"))); // NOI18N
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel12.setText("Tayangkan Film");
+
+        javax.swing.GroupLayout jPanelTayangLayout = new javax.swing.GroupLayout(jPanelTayang);
+        jPanelTayang.setLayout(jPanelTayangLayout);
+        jPanelTayangLayout.setHorizontalGroup(
+            jPanelTayangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTayangLayout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(jPanelTayangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTayangLayout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(61, 61, 61))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTayangLayout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(26, 26, 26))))
+        );
+        jPanelTayangLayout.setVerticalGroup(
+            jPanelTayangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTayangLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel12)
+                .addContainerGap())
+        );
+
         jPanelLogout.setBackground(new java.awt.Color(239, 239, 239));
         jPanelLogout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelLogout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -146,7 +186,7 @@ private static Connection koneksi;
         jPanelLogoutLayout.setHorizontalGroup(
             jPanelLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLogoutLayout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
@@ -280,9 +320,11 @@ private static Connection koneksi;
                 .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelLaporan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelPesanFilm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addGap(35, 35, 35)
+                .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelTayang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelContainerLayout.setVerticalGroup(
             jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,16 +333,14 @@ private static Connection koneksi;
                 .addGap(88, 88, 88)
                 .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanelTambahFilm, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelPesanFilm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanelPesanFilm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelTayang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
-                .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelDetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelDetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelLaporan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(108, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContainerLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(164, 164, 164))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -322,31 +362,44 @@ private static Connection koneksi;
     private void jPanelTambahFilmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTambahFilmMouseClicked
         // TODO add your handling code here:
         TambahFilm add = new TambahFilm();
-        add.show();
+        add.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanelTambahFilmMouseClicked
 
     private void jPanelPesanFilmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPesanFilmMouseClicked
         // TODO add your handling code here:
         ShowMovie movie = new ShowMovie();
-        movie.show();
+        movie.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanelPesanFilmMouseClicked
 
     private void jPanelLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelLogoutMouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
+        Login login = new Login();
+        login.setVisible(true);
     }//GEN-LAST:event_jPanelLogoutMouseClicked
 
     private void jPanelDetailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelDetailMouseClicked
         // TODO add your handling code here:
         DetailTransaksi detail = new DetailTransaksi();
-        detail.show();
+        detail.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanelDetailMouseClicked
 
     private void jPanelLaporanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelLaporanMouseClicked
         // TODO add your handling code here:
         Laporan laporan = new Laporan();
-        laporan.show();
+        laporan.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanelLaporanMouseClicked
+
+    private void jPanelTayangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTayangMouseClicked
+        // TODO add your handling code here:
+        AddShowMovie addshow = new AddShowMovie();
+        addshow.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jPanelTayangMouseClicked
 
     
      
@@ -392,6 +445,8 @@ private static Connection koneksi;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -408,6 +463,7 @@ private static Connection koneksi;
     private javax.swing.JPanel jPanelLogout;
     private javax.swing.JPanel jPanelPesanFilm;
     private javax.swing.JPanel jPanelTambahFilm;
+    private javax.swing.JPanel jPanelTayang;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

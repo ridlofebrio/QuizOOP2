@@ -30,16 +30,11 @@ public class PesanTiket extends javax.swing.JFrame {
     public PesanTiket() {
 
         initComponents();
-
         infokursi.setEditable(false);
-
-//        buka_koneksi();
     }
 
     public void cekButton() {
         try {
-
-//            buka_koneksi();
             Statement s = koneksi.createStatement();
             String sql = "select id_kursi from pesankursi where id_studio = '" + o[2] + "' and kode_jam ='" + o[3] + "'";
             ResultSet r = s.executeQuery(sql);
@@ -47,7 +42,6 @@ public class PesanTiket extends javax.swing.JFrame {
                 int no = Integer.parseInt(r.getString("id_kursi"));
                 System.out.println("ini index = " + no);
                 kursi[no - 1] = true;
-
             }
         } catch (SQLException E) {
             JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + E.getMessage());
@@ -57,8 +51,6 @@ public class PesanTiket extends javax.swing.JFrame {
 
     public void ambilData() {
         try {
-//            buka_koneksi();
-
             Statement s = koneksi.createStatement();
             System.out.println("index : " + o[0]);
             String sql = "select m.id_show as id, f.judul_film as judul , s.nama_studio as studio ,  j.jam_mulai as jam from showmovie m INNER join film f on f.id_film=m.id_film INNER JOIN studio s on s.id_studio = m.id_studio INNER JOIN jam_tayang j on j.kode_jam= m.kode_jam where m.id_show='" + o[0] + "';";
@@ -78,20 +70,6 @@ public class PesanTiket extends javax.swing.JFrame {
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + e.getMessage());
-        }
-    }
-
-    private static void buka_koneksi() {
-        if (koneksi == null) {
-            try {
-                String url = "jdbc:mysql://localhost:3306/bioskop";
-                String user = "root";
-                String password = "";
-
-                koneksi = DriverManager.getConnection(url, user, password);
-            } catch (SQLException t) {
-                System.out.println("Error membuat koneksi");
-            }
         }
     }
 
@@ -481,6 +459,9 @@ public class PesanTiket extends javax.swing.JFrame {
         });
 
         jButtonCancel.setText("Cancel");
+        jButtonCancel.setMaximumSize(new java.awt.Dimension(700, 700));
+        jButtonCancel.setMinimumSize(new java.awt.Dimension(700, 500));
+        jButtonCancel.setPreferredSize(new java.awt.Dimension(700, 500));
         jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelActionPerformed(evt);
@@ -511,20 +492,20 @@ public class PesanTiket extends javax.swing.JFrame {
                                         .addComponent(text_film, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jLabeldata, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(jLabelPilih))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanelContainerLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109)
+                        .addComponent(jButtonPesan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanelContainerLayout.createSequentialGroup()
-                        .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanelSeating, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelContainerLayout.createSequentialGroup()
-                                .addGap(134, 134, 134)
-                                .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40)
-                                .addComponent(jButtonPesan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(31, 31, 31)
+                        .addComponent(jPanelSeating, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
-                        .addGap(0, 39, Short.MAX_VALUE))))
+                        .addGap(34, 34, 34))))
             .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanelContainerLayout.setVerticalGroup(
@@ -536,7 +517,7 @@ public class PesanTiket extends javax.swing.JFrame {
                     .addComponent(text_film, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelFilm))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelContainerLayout.createSequentialGroup()
                         .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelStudio)
@@ -550,17 +531,18 @@ public class PesanTiket extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelPilih)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanelSeating, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelSeating, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonPesan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(30, Short.MAX_VALUE))
                     .addGroup(jPanelContainerLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
+                        .addGap(27, 27, 27)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonPesan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                        .addGap(93, 93, 93))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -585,12 +567,15 @@ public class PesanTiket extends javax.swing.JFrame {
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         // TODO add your handling code here:
+        ShowMovie show = new ShowMovie();
+        show.setVisible(false);
         this.setVisible(false);
+        Menu menu = new Menu();
+        menu.setVisible(true);
     }//GEN-LAST:event_jButtonCancelActionPerformed
 
     private void jButtonPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesanActionPerformed
         // TODO add your handling code here:
-//        buka_koneksi();
         String nama = jTextFieldNama.getText();
         int harga = 0;
 
@@ -633,7 +618,6 @@ public class PesanTiket extends javax.swing.JFrame {
             }
 
             try {
-
                 String update = "update transaksi set total_bayar = '" + harga + "' where id_transaksi='" + id + "'";
                 PreparedStatement t = koneksi.prepareStatement(update);
                 t.executeUpdate(update);

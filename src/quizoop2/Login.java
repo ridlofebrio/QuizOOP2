@@ -185,7 +185,8 @@ public class Login extends javax.swing.JFrame {
             if(password.equals("admin")){
                 JOptionPane.showMessageDialog(null, "Selamat Datang");
                 Menu menu = new Menu();
-                menu.show();
+                menu.setVisible(true);
+                this.setVisible(false);
             }else{
                JOptionPane.showMessageDialog(null, "Password Salah"); 
             } 

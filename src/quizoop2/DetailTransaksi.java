@@ -81,7 +81,7 @@ public class DetailTransaksi extends javax.swing.JFrame {
         jButtonBuatNota = new javax.swing.JButton();
         jButtonBack = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(800, 500));
+        setMinimumSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(249, 253, 255));
 
@@ -209,14 +209,13 @@ public class DetailTransaksi extends javax.swing.JFrame {
         }
         String sqlkode = "DELETE FROM detail_transaksi WHERE id_transaksi = ?";
         try {
-//            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost:3306/bioskop", "root", "");
             PreparedStatement mStatement = koneksi.prepareStatement(sqlkode);
             mStatement.setString(1, idToDelete); // Set the parameter for the ID
             mStatement.executeUpdate();
             mStatement.close();
             JOptionPane.showMessageDialog(this, "Data berhasil dihapus.");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Error deleting record. "+ex);
+            JOptionPane.showMessageDialog(this, "Error deleting record. " + ex);
         }
         ambil_data_tabel();
     }//GEN-LAST:event_jButtonDeleteActionPerformed
@@ -273,6 +272,8 @@ public class DetailTransaksi extends javax.swing.JFrame {
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        Menu menu = new Menu();
+        menu.setVisible(true);
     }//GEN-LAST:event_jButtonBackActionPerformed
 
     /**
@@ -307,7 +308,7 @@ public class DetailTransaksi extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new DetailTransaksi().setVisible(true);
-                
+
             }
         });
     }

@@ -390,6 +390,8 @@ public class TambahFilm extends javax.swing.JFrame {
     private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        Menu menu = new Menu();
+        menu.setVisible(true);
     }//GEN-LAST:event_buttonBackActionPerformed
 
     /**

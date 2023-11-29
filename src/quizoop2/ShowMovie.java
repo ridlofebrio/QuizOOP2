@@ -39,25 +39,10 @@ public class ShowMovie extends javax.swing.JFrame {
         ambilData();
     }
 
-    private static void buka_koneksi() {
-        if (koneksi == null) {
-            try {
-                String url = "jdbc:mysql://localhost:3306/bioskop";
-                String user = "root";
-                String password = "";
-                koneksi = DriverManager.getConnection(url, user, password);
-
-            } catch (SQLException t) {
-                System.out.println("Error");
-            }
-        }
-    }
-
     public void ambilData() {
         model.getDataVector().removeAllElements();
         model.fireTableDataChanged();
         try {
-//            buka_koneksi();
             int count = 0;
             Statement s = koneksi.createStatement();
             String sql = "select m.id_show as id, f.judul_film as judul , "
@@ -222,8 +207,6 @@ public class ShowMovie extends javax.swing.JFrame {
         String coba = model.getValueAt(selected, 0).toString();
         System.out.println(coba);
         try {
-//            buka_koneksi();
-
             Statement s = koneksi.createStatement();
             String sql = "select * from showmovie where id_show= '" + coba + "'";
             ResultSet r = s.executeQuery(sql);
@@ -260,6 +243,8 @@ public class ShowMovie extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        Menu menu = new Menu();
+        menu.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

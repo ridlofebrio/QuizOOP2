@@ -14,55 +14,52 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import Connection.koneksi;
 
 public class Laporan extends javax.swing.JFrame {
 
     /**
      * Creates new form Laporan
      */
-    
-  
-    
-    private static Connection koneksi;
-    
- private DefaultTableModel model;
+    private static Connection koneksi = new koneksi().with();
+
+    private DefaultTableModel model;
+
     public Laporan() {
         initComponents();
         textarea.setEditable(false);
-        model= new DefaultTableModel();
+        model = new DefaultTableModel();
         this.jTable2.setModel(model);
-        
+
         model.addColumn("No");
         model.addColumn("Bulan");
         model.addColumn("Revenue");
         ambilData();
     }
-    
-    
-    public  void ambilData(){
+
+    public void ambilData() {
         model.getDataVector().removeAllElements();
         model.fireTableDataChanged();
-        try{
-            buka_koneksi();
+        try {
             int count = 0;
-            Statement s= koneksi.createStatement();
-            String sql="select id_transaksi as id,Month(tanggal_transaksi) as bulan ,sum(total_bayar) as bayar from transaksi group by Month(tanggal_transaksi); ";
+            Statement s = koneksi.createStatement();
+            String sql = "select id_transaksi as id,Month(tanggal_transaksi) as bulan ,sum(total_bayar) as bayar from transaksi group by Month(tanggal_transaksi); ";
             ResultSet r = s.executeQuery(sql);
-            while(r.next()){
+            while (r.next()) {
                 Object[] o = new Object[3];
-o[0] =++count;
-o[1] = r.getString("bulan");
-o[2] = r.getString("bayar");
+                o[0] = ++count;
+                o[1] = r.getString("bulan");
+                o[2] = r.getString("bayar");
 
-model.addRow(o);
+                model.addRow(o);
             }
             r.close();
             s.close();
-                
-        }catch(SQLException e){
-            JOptionPane.showMessageDialog(this,"Terjadi kesalahan " + e.getMessage());
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + e.getMessage());
         }
-        
+
     }
 
     /**
@@ -85,6 +82,9 @@ model.addRow(o);
         jLabelTittle = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+
+        setMinimumSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(249, 253, 255));
 
@@ -146,6 +146,9 @@ model.addRow(o);
         );
 
         jButton1.setText("Kembali");
+        jButton1.setMaximumSize(new java.awt.Dimension(800, 600));
+        jButton1.setMinimumSize(new java.awt.Dimension(800, 500));
+        jButton1.setPreferredSize(new java.awt.Dimension(800, 500));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -160,11 +163,11 @@ model.addRow(o);
                 .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(119, 119, 119)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(168, 168, 168))
+                .addGap(162, 162, 162))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,24 +178,23 @@ model.addRow(o);
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112))))
+                        .addGap(110, 110, 110))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(34, 34, 34)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -203,7 +205,7 @@ model.addRow(o);
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -211,62 +213,38 @@ model.addRow(o);
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
         // TODO add your handling code here:
-         int selected = jTable2.getSelectedRow();
-        String coba= model.getValueAt(selected, 1).toString();
-        
-      try{
-          buka_koneksi();
-          Statement s= koneksi.createStatement();
-            String sqlkode="select f.judul_film as judul ,count(d.id_film) as jumlah from detail_transaksi d inner join film f on f.id_film = d.id_film where MONTH(tgl_transaksi)='"+coba+"' GROUP by d.id_film ;";
+        int selected = jTable2.getSelectedRow();
+        String coba = model.getValueAt(selected, 1).toString();
+
+        try {
+            Statement s = koneksi.createStatement();
+            String sqlkode = "select f.judul_film as judul ,count(d.id_film) as jumlah from detail_transaksi d inner join film f on f.id_film = d.id_film where MONTH(tgl_transaksi)='" + coba + "' GROUP by d.id_film ;";
             ResultSet r = s.executeQuery(sqlkode);
-           
-             String infodetail = "Bulan "+coba+"\n";
-            while(r.next()){
-                     Object[] o = new Object[2];
-        o[0]=r.getString("judul");
-        o[1]=r.getString("jumlah");
-        infodetail+=o[0]+" = "+o[1]+"\n";
-        textarea.setText(infodetail);
-          
+
+            String infodetail = "Bulan " + coba + "\n";
+            while (r.next()) {
+                Object[] o = new Object[2];
+                o[0] = r.getString("judul");
+                o[1] = r.getString("jumlah");
+                infodetail += o[0] + " = " + o[1] + "\n";
+                textarea.setText(infodetail);
+
             }
-       
 
-       
-        
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Tejadi Kesalahan " + e.getMessage());
+        }
 
-    
-      }catch(SQLException e){
-          JOptionPane.showMessageDialog(this, "Tejadi Kesalahan "+ e.getMessage());
-      }
-            
-        
-      
-        
-        
-        
-        
+
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        Menu menu = new Menu();
+        menu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private static void buka_koneksi(){
-        if(koneksi==null){
-            try{
-                String url="jdbc:mysql://localhost:3306/bioskop";
-                String user="root";
-                String password = "";
-                koneksi=DriverManager.getConnection(url,user,password);
-                            
-                
-            }catch (SQLException t){
-                System.out.println("Error");
-            }
-        }
-    }
-    
     /**
      * @param args the command line arguments
      */
