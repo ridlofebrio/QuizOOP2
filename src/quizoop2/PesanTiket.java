@@ -42,11 +42,11 @@ public class PesanTiket extends javax.swing.JFrame {
                 int no = Integer.parseInt(r.getString("id_kursi"));
                 System.out.println("ini index = " + no);
                 kursi[no - 1] = true;
+
             }
         } catch (SQLException E) {
             JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + E.getMessage());
         }
-
     }
 
     public void ambilData() {
@@ -111,22 +111,22 @@ public class PesanTiket extends javax.swing.JFrame {
         jButtonSeat2 = new javax.swing.JButton();
         jButtonSeat3 = new javax.swing.JButton();
         jButtonSeat4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        jButtonSeat5 = new javax.swing.JButton();
+        jButtonSeat6 = new javax.swing.JButton();
+        jButtonSeat7 = new javax.swing.JButton();
+        jButtonSeat8 = new javax.swing.JButton();
+        jButtonSeat9 = new javax.swing.JButton();
+        jButtonSeat10 = new javax.swing.JButton();
+        jButtonSeat11 = new javax.swing.JButton();
+        jButtonSeat12 = new javax.swing.JButton();
+        jButtonSeat13 = new javax.swing.JButton();
+        jButtonSeat14 = new javax.swing.JButton();
+        jButtonSeat15 = new javax.swing.JButton();
+        jButtonSeat16 = new javax.swing.JButton();
+        jButtonSeat17 = new javax.swing.JButton();
+        jButtonSeat18 = new javax.swing.JButton();
+        jButtonSeat19 = new javax.swing.JButton();
+        jButtonSeat20 = new javax.swing.JButton();
         jButtonPesan = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
@@ -238,115 +238,115 @@ public class PesanTiket extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("5");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat5.setText("5");
+        jButtonSeat5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButtonSeat5ActionPerformed(evt);
             }
         });
 
-        jButton6.setText("6");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat6.setText("6");
+        jButtonSeat6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButtonSeat6ActionPerformed(evt);
             }
         });
 
-        jButton7.setText("7");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat7.setText("7");
+        jButtonSeat7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jButtonSeat7ActionPerformed(evt);
             }
         });
 
-        jButton8.setText("8");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat8.setText("8");
+        jButtonSeat8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jButtonSeat8ActionPerformed(evt);
             }
         });
 
-        jButton9.setText("9");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat9.setText("9");
+        jButtonSeat9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                jButtonSeat9ActionPerformed(evt);
             }
         });
 
-        jButton10.setText("10");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat10.setText("10");
+        jButtonSeat10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                jButtonSeat10ActionPerformed(evt);
             }
         });
 
-        jButton11.setText("11");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat11.setText("11");
+        jButtonSeat11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                jButtonSeat11ActionPerformed(evt);
             }
         });
 
-        jButton12.setText("12");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat12.setText("12");
+        jButtonSeat12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                jButtonSeat12ActionPerformed(evt);
             }
         });
 
-        jButton13.setText("13");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat13.setText("13");
+        jButtonSeat13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                jButtonSeat13ActionPerformed(evt);
             }
         });
 
-        jButton14.setText("14");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat14.setText("14");
+        jButtonSeat14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                jButtonSeat14ActionPerformed(evt);
             }
         });
 
-        jButton15.setText("15");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat15.setText("15");
+        jButtonSeat15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                jButtonSeat15ActionPerformed(evt);
             }
         });
 
-        jButton16.setText("16");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat16.setText("16");
+        jButtonSeat16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                jButtonSeat16ActionPerformed(evt);
             }
         });
 
-        jButton17.setText("17");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat17.setText("17");
+        jButtonSeat17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                jButtonSeat17ActionPerformed(evt);
             }
         });
 
-        jButton18.setText("18");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat18.setText("18");
+        jButtonSeat18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                jButtonSeat18ActionPerformed(evt);
             }
         });
 
-        jButton19.setText("19");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat19.setText("19");
+        jButtonSeat19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                jButtonSeat19ActionPerformed(evt);
             }
         });
 
-        jButton20.setText("20");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSeat20.setText("20");
+        jButtonSeat20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                jButtonSeat20ActionPerformed(evt);
             }
         });
 
@@ -362,23 +362,23 @@ public class PesanTiket extends javax.swing.JFrame {
                             .addComponent(jButtonSeat1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelSeatingLayout.createSequentialGroup()
                                 .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonSeat13, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelSeatingLayout.createSequentialGroup()
-                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButtonSeat6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jButtonSeat7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanelSeatingLayout.createSequentialGroup()
-                                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButtonSeat14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(jButtonSeat15, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonSeat2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonSeat8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonSeat16, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(40, 40, 40)
                         .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelSeatingLayout.createSequentialGroup()
@@ -387,28 +387,28 @@ public class PesanTiket extends javax.swing.JFrame {
                                 .addComponent(jButtonSeat4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanelSeatingLayout.createSequentialGroup()
-                                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat17, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat18, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat19, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonSeat20, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanelSeatingLayout.createSequentialGroup()
-                                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSeat11, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jButtonSeat12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanelSeatingLayout.createSequentialGroup()
                         .addGap(225, 225, 225)
                         .addComponent(jLabelSeating)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelSeatingLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton10, jButton11, jButton12, jButton13, jButton14, jButton15, jButton16, jButton17, jButton18, jButton19, jButton20, jButton5, jButton6, jButton7, jButton8, jButton9, jButtonSeat1, jButtonSeat2, jButtonSeat3, jButtonSeat4});
+        jPanelSeatingLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonSeat1, jButtonSeat10, jButtonSeat11, jButtonSeat12, jButtonSeat13, jButtonSeat14, jButtonSeat15, jButtonSeat16, jButtonSeat17, jButtonSeat18, jButtonSeat19, jButtonSeat2, jButtonSeat20, jButtonSeat3, jButtonSeat4, jButtonSeat5, jButtonSeat6, jButtonSeat7, jButtonSeat8, jButtonSeat9});
 
         jPanelSeatingLayout.setVerticalGroup(
             jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,31 +425,31 @@ public class PesanTiket extends javax.swing.JFrame {
                             .addComponent(jButtonSeat4))
                         .addGap(16, 16, 16)
                         .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8)
-                            .addComponent(jButton9)
-                            .addComponent(jButton10)
-                            .addComponent(jButton11)
-                            .addComponent(jButton12))
+                            .addComponent(jButtonSeat5)
+                            .addComponent(jButtonSeat6)
+                            .addComponent(jButtonSeat7)
+                            .addComponent(jButtonSeat8)
+                            .addComponent(jButtonSeat9)
+                            .addComponent(jButtonSeat10)
+                            .addComponent(jButtonSeat11)
+                            .addComponent(jButtonSeat12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton17)
-                            .addComponent(jButton18)
-                            .addComponent(jButton19)
-                            .addComponent(jButton20)))
+                            .addComponent(jButtonSeat17)
+                            .addComponent(jButtonSeat18)
+                            .addComponent(jButtonSeat19)
+                            .addComponent(jButtonSeat20)))
                     .addGroup(jPanelSeatingLayout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addGroup(jPanelSeatingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton13)
-                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton15)
-                            .addComponent(jButton16))))
+                            .addComponent(jButtonSeat13)
+                            .addComponent(jButtonSeat14, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonSeat15)
+                            .addComponent(jButtonSeat16))))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jPanelSeatingLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton10, jButton11, jButton12, jButton13, jButton14, jButton15, jButton16, jButton17, jButton18, jButton19, jButton20, jButton5, jButton6, jButton7, jButton8, jButton9, jButtonSeat1, jButtonSeat2, jButtonSeat3, jButtonSeat4});
+        jPanelSeatingLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonSeat1, jButtonSeat10, jButtonSeat11, jButtonSeat12, jButtonSeat13, jButtonSeat14, jButtonSeat15, jButtonSeat16, jButtonSeat17, jButtonSeat18, jButtonSeat19, jButtonSeat2, jButtonSeat20, jButtonSeat3, jButtonSeat4, jButtonSeat5, jButtonSeat6, jButtonSeat7, jButtonSeat8, jButtonSeat9});
 
         jButtonPesan.setText("Pesan");
         jButtonPesan.addActionListener(new java.awt.event.ActionListener() {
@@ -516,7 +516,6 @@ public class PesanTiket extends javax.swing.JFrame {
                 .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_film, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelFilm))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelContainerLayout.createSequentialGroup()
                         .addGroup(jPanelContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -583,6 +582,7 @@ public class PesanTiket extends javax.swing.JFrame {
             String create = "insert into transaksi (nama_pelanggan,total_bayar,tanggal_transaksi) values ('" + nama + "','0',NOW())";
             PreparedStatement t = koneksi.prepareStatement(create);
             t.executeUpdate(create);
+            System.out.println("insert to transaksi success");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + e.getMessage());
         }
@@ -613,6 +613,8 @@ public class PesanTiket extends javax.swing.JFrame {
                 mStatement = koneksi.prepareStatement(sql3);
                 mStatement.executeUpdate(sql3);
 
+                System.out.println("insert to detail success");
+
                 mStatement.close();
 
             }
@@ -621,19 +623,29 @@ public class PesanTiket extends javax.swing.JFrame {
                 String update = "update transaksi set total_bayar = '" + harga + "' where id_transaksi='" + id + "'";
                 PreparedStatement t = koneksi.prepareStatement(update);
                 t.executeUpdate(update);
+                System.out.println("set total bayar on transaksi success");
             } catch (SQLException e) {
                 JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + e.getMessage());
             }
             s.close();
 
+            String info = "Nama Pelanggan\t:" + nama + "\n";
+            info += "Jumlah tiket\t:" + jumlah + "\n";
+            info += "Total Bayar\t:" + harga + "\n";
+
+            JOptionPane.showMessageDialog(null, "Pesanan berhasil ditambahkan\n" + info);
+
+            this.setVisible(false);
+            DetailTransaksi detail = new DetailTransaksi();
+            detail.setVisible(true);
         } catch (SQLException E) {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan haha " + E.getMessage());
+            JOptionPane.showMessageDialog(this, "Terjadi kesalahan " + E.getMessage());
         }
 
 
     }//GEN-LAST:event_jButtonPesanActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void jButtonSeat12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat12ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(11)) {
             selected[jumlah] = 1;
@@ -641,11 +653,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 12\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 12  booked");
         }
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_jButtonSeat12ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jButtonSeat11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat11ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(10)) {
             selected[jumlah] = 1;
@@ -653,10 +665,10 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 11\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 11  booked");
         }
 
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_jButtonSeat11ActionPerformed
 
     private void text_studioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_studioActionPerformed
         // TODO add your handling code here:
@@ -686,7 +698,7 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 2\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 2  booked");
         }
     }//GEN-LAST:event_jButtonSeat2ActionPerformed
 
@@ -698,23 +710,23 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 3\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 3  booked");
         }
     }//GEN-LAST:event_jButtonSeat3ActionPerformed
 
     private void jButtonSeat4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat4ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(3)) {
-            selected[jumlah] = 1;
+            selected[jumlah] = 4;
             jumlah += 1;
             display += "Kursi no 4\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 4  booked");
         }
     }//GEN-LAST:event_jButtonSeat4ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButtonSeat7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat7ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(6)) {
             selected[jumlah] = 7;
@@ -722,11 +734,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 7\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 7  booked");
         }
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jButtonSeat7ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButtonSeat5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat5ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(4)) {
             selected[jumlah] = 5;
@@ -734,11 +746,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 5\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 5  booked");
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_jButtonSeat5ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButtonSeat6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat6ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(5)) {
             selected[jumlah] = 6;
@@ -746,11 +758,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 6\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 6  booked");
         }
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButtonSeat6ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButtonSeat8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat8ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(7)) {
             selected[jumlah] = 8;
@@ -758,11 +770,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 8\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 8  booked");
         }
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jButtonSeat8ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void jButtonSeat9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat9ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(8)) {
             selected[jumlah] = 9;
@@ -770,11 +782,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 9\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 9  booked");
         }
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_jButtonSeat9ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jButtonSeat10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat10ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(9)) {
             selected[jumlah] = 10;
@@ -782,11 +794,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 10\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 10  booked");
         }
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_jButtonSeat10ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void jButtonSeat13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat13ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(12)) {
             selected[jumlah] = 13;
@@ -794,22 +806,22 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 13\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 13  booked");
         }
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_jButtonSeat13ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void jButtonSeat14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat14ActionPerformed
         if (Buttoncek(13)) {
             selected[jumlah] = 14;
             jumlah += 1;
             display += "Kursi no 14\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 14  booked");
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_jButtonSeat14ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void jButtonSeat15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat15ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(14)) {
             selected[jumlah] = 15;
@@ -817,11 +829,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 15\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 15  booked");
         }
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_jButtonSeat15ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void jButtonSeat16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat16ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(15)) {
             selected[jumlah] = 16;
@@ -829,11 +841,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 16\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 16  booked");
         }
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_jButtonSeat16ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void jButtonSeat17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat17ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(16)) {
             selected[jumlah] = 17;
@@ -841,11 +853,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 17\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 17  booked");
         }
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_jButtonSeat17ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void jButtonSeat18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat18ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(17)) {
             selected[jumlah] = 18;
@@ -853,11 +865,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 18\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 18  booked");
         }
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_jButtonSeat18ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void jButtonSeat19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat19ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(18)) {
             selected[jumlah] = 19;
@@ -865,11 +877,11 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 19\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 19  booked");
         }
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_jButtonSeat19ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void jButtonSeat20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeat20ActionPerformed
         // TODO add your handling code here:
         if (Buttoncek(19)) {
             selected[jumlah] = 20;
@@ -877,9 +889,9 @@ public class PesanTiket extends javax.swing.JFrame {
             display += "Kursi no 20\n";
             infokursi.setText(display);
         } else {
-            JOptionPane.showMessageDialog(this, "Terjadi kesalahan aa ");
+            JOptionPane.showMessageDialog(this, "Kursi 18  booked");
         }
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_jButtonSeat20ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -922,28 +934,28 @@ public class PesanTiket extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea infokursi;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonPesan;
     private javax.swing.JButton jButtonSeat1;
+    private javax.swing.JButton jButtonSeat10;
+    private javax.swing.JButton jButtonSeat11;
+    private javax.swing.JButton jButtonSeat12;
+    private javax.swing.JButton jButtonSeat13;
+    private javax.swing.JButton jButtonSeat14;
+    private javax.swing.JButton jButtonSeat15;
+    private javax.swing.JButton jButtonSeat16;
+    private javax.swing.JButton jButtonSeat17;
+    private javax.swing.JButton jButtonSeat18;
+    private javax.swing.JButton jButtonSeat19;
     private javax.swing.JButton jButtonSeat2;
+    private javax.swing.JButton jButtonSeat20;
     private javax.swing.JButton jButtonSeat3;
     private javax.swing.JButton jButtonSeat4;
+    private javax.swing.JButton jButtonSeat5;
+    private javax.swing.JButton jButtonSeat6;
+    private javax.swing.JButton jButtonSeat7;
+    private javax.swing.JButton jButtonSeat8;
+    private javax.swing.JButton jButtonSeat9;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelFilm;
     private javax.swing.JLabel jLabelNama;

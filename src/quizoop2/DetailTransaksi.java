@@ -33,6 +33,7 @@ public class DetailTransaksi extends javax.swing.JFrame {
         model.addColumn("Id Studio");
         model.addColumn("Id Kursi");
         model.addColumn("Kode Jam");
+        model.addColumn("Nota Id");
         ambil_data_tabel();
     }
 
@@ -42,15 +43,21 @@ public class DetailTransaksi extends javax.swing.JFrame {
         try {
             Statement s = koneksi.createStatement();
             String sql = "Select * from detail_transaksi";
-            ResultSet r = s.executeQuery(sql);
+            String query = "SELECT id_transaksi, tgl_transaksi, f.judul_film, s.nama_studio, k.nama_kursi, k.id_kursi, "
+                    + "j.jam_mulai, nota_id FROM detail_transaksi d "
+                    + "INNER JOIN film f on f.id_film = d.id_film "
+                    + "INNER JOIN studio s on s.id_studio = d.id_studio "
+                    + "INNER JOIN kursi k on k.id_kursi = d.id_kursi "
+                    + "INNER JOIN jam_tayang j on j.kode_jam = d.kode_jam ";
+            ResultSet r = s.executeQuery(query);
             while (r.next()) {
                 Object[] o = new Object[7];
                 o[0] = r.getString("id_transaksi");
                 o[1] = r.getString("tgl_transaksi");
-                o[2] = r.getString("id_film");
-                o[3] = r.getString("id_studio");
-                o[4] = r.getString("id_kursi");
-                o[5] = r.getString("id_kursi");
+                o[2] = r.getString("judul_film");
+                o[3] = r.getString("nama_studio");
+                o[4] = r.getString("nama_kursi");
+                o[5] = r.getString("jam_mulai");
                 o[6] = r.getString("nota_id");
                 model.addRow(o);
             }
@@ -231,7 +238,12 @@ public class DetailTransaksi extends javax.swing.JFrame {
 
             // Query to retrieve data based on id_transaksi
 //        String query = "SELECT * FROM detail_transaksi WHERE id_transaksi = '" + id_transaksi + "'";
-            String query = "SELECT id_transaksi, tgl_transaksi, f.judul_film, s.nama_studio, nama_pelanggan, k.nama_kursi, kode_jam FROM detail_transaksi d INNER JOIN film f on f.id_film = d.id_film INNER JOIN studio s on s.id_studio = d.id_studio INNER JOIN kursi k on k.id_kursi = d.id_kursi WHERE id_transaksi = '" + id_transaksi + "'";
+            String query = "SELECT id_transaksi, tgl_transaksi, f.judul_film, s.nama_studio, k.nama_kursi, "
+                    + "kode_jam FROM detail_transaksi d "
+                    + "INNER JOIN film f on f.id_film = d.id_film "
+                    + "INNER JOIN studio s on s.id_studio = d.id_studio "
+                    + "INNER JOIN kursi k on k.id_kursi = d.id_kursi "
+                    + "WHERE id_transaksi = '" + id_transaksi + "'";
 
             try {
                 Statement s = koneksi.createStatement();

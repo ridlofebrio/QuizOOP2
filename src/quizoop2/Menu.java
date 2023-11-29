@@ -250,7 +250,7 @@ private static Connection koneksi;
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/pilih_film.png"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel4.setText("Pilih Film");
+        jLabel4.setText("Pesan Tiket");
 
         javax.swing.GroupLayout jPanelPesanFilmLayout = new javax.swing.GroupLayout(jPanelPesanFilm);
         jPanelPesanFilm.setLayout(jPanelPesanFilmLayout);
@@ -258,10 +258,12 @@ private static Connection koneksi;
             jPanelPesanFilmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPesanFilmLayout.createSequentialGroup()
                 .addContainerGap(51, Short.MAX_VALUE)
-                .addGroup(jPanelPesanFilmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48))
+                .addComponent(jLabel3)
+                .addGap(61, 61, 61))
+            .addGroup(jPanelPesanFilmLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelPesanFilmLayout.setVerticalGroup(
             jPanelPesanFilmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
