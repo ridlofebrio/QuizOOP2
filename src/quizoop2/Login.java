@@ -33,16 +33,17 @@ public class Login extends javax.swing.JFrame {
         userfield = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        passfield = new javax.swing.JTextField();
         loginButton = new javax.swing.JButton();
+        jPasswordField = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(39, 40, 41));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(800, 500));
-        setPreferredSize(new java.awt.Dimension(800, 1000));
+        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(39, 40, 41));
 
@@ -70,19 +71,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Titillium Web", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setLabelFor(passfield);
         jLabel3.setText("Password");
-
-        passfield.setBackground(new java.awt.Color(39, 40, 41));
-        passfield.setFont(new java.awt.Font("Titillium Web", 0, 10)); // NOI18N
-        passfield.setForeground(new java.awt.Color(255, 255, 255));
-        passfield.setToolTipText("");
-        passfield.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        passfield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passfieldActionPerformed(evt);
-            }
-        });
 
         loginButton.setBackground(new java.awt.Color(51, 51, 51));
         loginButton.setFont(new java.awt.Font("Titillium Web", 0, 18)); // NOI18N
@@ -96,6 +85,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jPasswordField.setBackground(new java.awt.Color(39, 40, 41));
+        jPasswordField.setForeground(new java.awt.Color(255, 255, 255));
+        jPasswordField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -106,12 +99,12 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userfield)
+                            .addComponent(userfield, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passfield, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(257, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -126,7 +119,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(passfield, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(116, Short.MAX_VALUE))
@@ -184,17 +177,16 @@ public class Login extends javax.swing.JFrame {
     private void userfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userfieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userfieldActionPerformed
-
-    private void passfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passfieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passfieldActionPerformed
     private String user, password;
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         user = userfield.getText();
-        password = passfield.getText();
+        password = jPasswordField.getText();
         if(user.equals("admin")){
             if(password.equals("admin")){
                 JOptionPane.showMessageDialog(null, "Selamat Datang");
+                Menu menu = new Menu();
+                menu.setVisible(true);
+                this.setVisible(false);
             }else{
                JOptionPane.showMessageDialog(null, "Password Salah"); 
             } 
@@ -246,8 +238,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JButton loginButton;
-    private javax.swing.JTextField passfield;
     private javax.swing.JTextField userfield;
     // End of variables declaration//GEN-END:variables
 }
